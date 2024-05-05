@@ -2,10 +2,12 @@ import Link from "next/link";
 import React from "react";
 import { FaBars } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
+import { categories, Category } from "@/data/Products";
 export interface navLink {
 	name: string;
 	href: string;
 }
+
 const links: navLink[] = [
 	{ name: "Home", href: "/" },
 	{ name: "Storage", href: "/category/storage" },
@@ -24,7 +26,7 @@ export default function Navbar() {
 				</Link>
 			</div>
 
-			<div className="flex md:hidden gap-x-4 items-center">
+			<div className="flex md:hidden gap-x-4 items-center text-xl cursor-pointer">
 				<FaBars />
 			</div>
 		</div>

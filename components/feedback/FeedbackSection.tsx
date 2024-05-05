@@ -7,8 +7,9 @@ export default function FeedbackSection() {
 				Help Us Improve
 			</h1>
 			<p className="text-center my-4">
-				Get in touch and let us know if there's a feature you'd like to
-				see or if there's something that doesn't look quite right.
+				Get in touch and let us know if there&apos;s a feature
+				you&apos;d like to see or if there&apos;s something that
+				doesn&apos;t look quite right.
 			</p>
 			<form className="w-10/12 max-w-[800px] shadow-lg flex flex-col gap-y-5 mx-auto py-5 px-4">
 				<input
