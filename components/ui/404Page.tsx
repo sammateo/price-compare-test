@@ -31,7 +31,7 @@ export default function Page404() {
 					</h1>
 
 					<p className="mt-4 text-gray-500">
-						We can't find that page.
+						We can&apos;t find that page.
 					</p>
 					<div>
 						<Link

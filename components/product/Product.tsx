@@ -1,6 +1,8 @@
 import React from "react";
 import { Product as ProductInterface, Price } from "@/data/Products";
 import Link from "next/link";
+import { CiCirclePlus } from "react-icons/ci";
+import { CiShare2 } from "react-icons/ci";
 export default function Product({ name, prices, slug }: ProductInterface) {
 	const avg = (prices: Price[]) => {
 		let sum = 0;
@@ -79,14 +81,28 @@ export default function Product({ name, prices, slug }: ProductInterface) {
 					<p>${cheapest(prices).price.toFixed(2)}</p>
 				</div> */}
 
-				<Link
-					href={`/product/${slug}`}
-					className="block w-full rounded bg-blue-400 p-4 text-sm text-center font-medium transition hover:scale-105 mt-4"
-				>
-					{/* <button className=""> */}
-					Add to List
-					{/* </button> */}
-				</Link>
+				{/* <div className="flex gap-x-4">
+					<Link
+						href={`/product/${slug}`}
+						className="block w-full rounded bg-blue-400 p-4 text-sm text-center font-medium transition hover:scale-105 mt-4"
+					>
+						Add to List
+					</Link>
+				</div> */}
+				<div className="flex gap-x-4">
+					<Link
+						href={`/product/${slug}`}
+						className="flex items-center gap-x-2 w-full rounded bg-blue-400 p-4 text-sm text-center font-medium transition hover:scale-105 mt-4"
+					>
+						<CiCirclePlus /> List
+					</Link>
+					<Link
+						href={`/product/${slug}`}
+						className="flex items-center gap-x-2 w-full rounded bg-blue-400 p-4 text-sm text-center font-medium transition hover:scale-105 mt-4"
+					>
+						<CiShare2 /> Share
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
