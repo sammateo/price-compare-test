@@ -1,8 +1,8 @@
 import React from "react";
 import { Product as ProductInterface, Price } from "@/data/Products";
 import Link from "next/link";
-import { CiCirclePlus } from "react-icons/ci";
-import { CiShare2 } from "react-icons/ci";
+import { IoAddCircleOutline } from "react-icons/io5";
+import { IoShareSocialOutline } from "react-icons/io5";
 export default function Product({ name, prices, slug }: ProductInterface) {
 	const avg = (prices: Price[]) => {
 		let sum = 0;
@@ -92,15 +92,15 @@ export default function Product({ name, prices, slug }: ProductInterface) {
 				<div className="flex gap-x-4">
 					<Link
 						href={`/product/${slug}`}
-						className="flex items-center gap-x-2 w-full rounded bg-blue-400 p-4 text-sm text-center font-medium transition hover:scale-105 mt-4"
+						className="flex items-center gap-x-2 w-fit rounded text-sm text-center font-medium transition hover:scale-105 mt-4"
 					>
-						<CiCirclePlus /> List
+						<IoAddCircleOutline /> List
 					</Link>
 					<Link
 						href={`/product/${slug}`}
-						className="flex items-center gap-x-2 w-full rounded bg-blue-400 p-4 text-sm text-center font-medium transition hover:scale-105 mt-4"
+						className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:scale-105 mt-4"
 					>
-						<CiShare2 /> Share
+						<IoShareSocialOutline /> Share
 					</Link>
 				</div>
 			</div>
