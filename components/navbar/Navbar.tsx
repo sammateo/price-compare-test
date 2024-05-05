@@ -3,6 +3,7 @@ import React from "react";
 import { FaBars } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
 import { categories, Category } from "@/data/Products";
+import SearchInput from "../ui/SearchInput";
 export interface navLink {
 	name: string;
 	href: string;
@@ -25,7 +26,9 @@ export default function Navbar() {
 					<p>Compare</p>
 				</Link>
 			</div>
-
+			<div className="hidden sm:block">
+				<SearchInput />
+			</div>
 			<div className="flex md:hidden gap-x-4 items-center text-xl cursor-pointer">
 				<FaBars />
 			</div>

@@ -8,6 +8,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaRegFlag } from "react-icons/fa6";
 import Page404 from "@/components/ui/404Page";
 import { IoAddCircleOutline, IoShareSocialOutline } from "react-icons/io5";
+import RelatedProducts from "@/components/product/RelatedProducts";
 const getProduct = (sulg: string) => {
 	const product = products.find((p) => p.slug === sulg);
 	return product;
@@ -77,11 +78,19 @@ export default function page({ params }: { params: { slug: string } }) {
 								</div>
 							</div>
 						</div>
+						<div>
+							<RelatedProducts
+								category={productData.category}
+								name={productData.name}
+								prices={productData.prices}
+								slug={productData.slug}
+							/>
+						</div>
 					</div>
 					<div>
 						<Link
 							href={"/"}
-							className="mx-auto my-5 w-fit flex items-center gap-x-4"
+							className="mx-auto my-5 w-fit flex items-center gap-x-2"
 						>
 							<FaArrowLeftLong />
 							Back to home

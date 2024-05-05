@@ -25,3 +25,34 @@
 html {
 	scroll-behavior: smooth;
 }
+/* width */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+/* width */
+::-webkit-scrollbar:horizontal {
+	height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	/* background: #888; */
+	/* border-radius: 5px; */
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal {
+	background: #000;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
