@@ -271,6 +271,21 @@ let products: Product[] = [
 	},
 ];
 
+export const categories: Category[] = [
+	{
+		name: "Dairy",
+	},
+	{
+		name: "Bakery",
+	},
+	{
+		name: "Produce",
+	},
+	{
+		name: "Breakfast",
+	},
+];
+
 export interface Product {
 	name: string;
 	prices: Price[];
@@ -286,6 +301,9 @@ export interface Price {
 
 interface SupermarketPricingData {
 	products: Product[];
+}
+export interface Category {
+	name: string;
 }
 
 export default products;
