@@ -5,7 +5,9 @@ import RightButton from "@/components/ui/RightButton";
 import Navbar from "@/components/navbar/Navbar";
 import Link from "next/link";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaRegFlag } from "react-icons/fa6";
 import Page404 from "@/components/ui/404Page";
+import { IoAddCircleOutline, IoShareSocialOutline } from "react-icons/io5";
 const getProduct = (sulg: string) => {
 	const product = products.find((p) => p.slug === sulg);
 	return product;
@@ -25,8 +27,28 @@ export default function page({ params }: { params: { slug: string } }) {
 							<img
 								src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
 								alt=""
-								className="h-64 md:h-auto w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+								className="  object-cover w-full transition duration-500 group-hover:scale-105 "
 							/>
+							<div className="flex gap-x-4 justify-center">
+								<Link
+									href={`/product/${params.slug}`}
+									className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:scale-105 mt-4"
+								>
+									<IoAddCircleOutline /> List
+								</Link>
+								<Link
+									href={`/product/${params.slug}`}
+									className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:scale-105 mt-4"
+								>
+									<IoShareSocialOutline /> Share
+								</Link>
+								<Link
+									href={`/help`}
+									className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:scale-105 mt-4"
+								>
+									<FaRegFlag /> Report
+								</Link>
+							</div>
 						</div>
 						<div>
 							{/* <p className=" text-2xl font-semibold">
