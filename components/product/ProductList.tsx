@@ -14,6 +14,7 @@ export default function ProductList() {
 					prices={product.prices}
 					category={product.category}
 					slug={product.slug}
+					brand={product.brand}
 				/>
 			))}
 		</div>

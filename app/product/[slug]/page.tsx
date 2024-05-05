@@ -22,9 +22,18 @@ export default function page({ params }: { params: { slug: string } }) {
 				<div>
 					<div className="grid grid-cols-1 md:grid-cols-2 px-4 gap-y-4 gap-x-2">
 						<div className="flex flex-col gap-y-5">
-							<p className="text-2xl font-semibold">
-								{productData.name}
-							</p>
+							<div>
+								<p className="text-2xl font-semibold">
+									{productData.name}
+								</p>
+								<p className="flex gap-x-2 items-center">
+									<span className="bg-blue-600 text-white px-3 py-1.5 text-xs font-medium w-fit">
+										{productData.brand}
+									</span>
+									<span>{productData.description}</span>
+								</p>
+							</div>
+
 							<img
 								src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
 								alt=""

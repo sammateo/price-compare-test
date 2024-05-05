@@ -3,7 +3,7 @@ import React from "react";
 export default function RightButton() {
 	return (
 		<a
-			className="group relative inline-flex items-center overflow-hidden rounded bg-indigo-600 px-4 py-2 text-white focus:outline-none focus:ring active:bg-indigo-500 w-fit"
+			className="group relative inline-flex items-center overflow-hidden rounded bg-blue-600 px-4 py-2 text-white focus:outline-none focus:ring active:bg-blue-500 w-fit"
 			href="#"
 		>
 			<span className="absolute -end-full transition-all group-hover:end-1">

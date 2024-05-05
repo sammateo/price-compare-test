@@ -3,7 +3,12 @@ import { Product as ProductInterface, Price } from "@/data/Products";
 import Link from "next/link";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { IoShareSocialOutline } from "react-icons/io5";
-export default function Product({ name, prices, slug }: ProductInterface) {
+export default function Product({
+	name,
+	prices,
+	slug,
+	brand,
+}: ProductInterface) {
 	const avg = (prices: Price[]) => {
 		let sum = 0;
 		prices.forEach((price) => {
@@ -63,6 +68,9 @@ export default function Product({ name, prices, slug }: ProductInterface) {
 			</Link>
 
 			<div className="relative border border-gray-100 bg-white p-6">
+				<p className="text-gray-700 py-1.5 text-xs font-medium w-fit uppercase">
+					{brand}
+				</p>
 				<Link href={`/product/${slug}`}>
 					<h3 className="mt-4 text-lg font-medium text-gray-900">
 						{name}
