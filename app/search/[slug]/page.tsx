@@ -26,7 +26,9 @@ export default function page({ params }: { params: { slug: string } }) {
 			<Navbar />
 			{searchResults && searchResults.length > 0 ? (
 				<div>
-					<h1>Average Price - Click Product To Compare</h1>
+					<h1 className="px-4 text-2xl font-bold text-center md:text-left">
+						Search Results for {params.slug}
+					</h1>
 					<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 px-4 py-10">
 						{searchResults.map((product) => (
 							<Product
