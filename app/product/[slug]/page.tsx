@@ -5,6 +5,7 @@ import RightButton from "@/components/ui/RightButton";
 import Navbar from "@/components/navbar/Navbar";
 import Link from "next/link";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import Page404 from "@/components/ui/404Page";
 const getProduct = (sulg: string) => {
 	const product = products.find((p) => p.slug === sulg);
 	return product;
@@ -60,7 +61,9 @@ export default function page({ params }: { params: { slug: string } }) {
 					</div>
 				</div>
 			) : (
-				<div></div>
+				<div>
+					<Page404 />
+				</div>
 			)}
 		</div>
 	);
