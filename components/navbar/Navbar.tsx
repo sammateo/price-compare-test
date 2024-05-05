@@ -26,7 +26,7 @@ export default function Navbar() {
 					<p>Compare</p>
 				</Link>
 			</div>
-			<div className="hidden sm:block">
+			<div className="block">
 				<SearchInput />
 			</div>
 			<div className="flex md:hidden gap-x-4 items-center text-xl cursor-pointer">
