@@ -4,6 +4,7 @@ import { Product as ProductInterface } from "@/data/Products";
 import RightButton from "@/components/ui/RightButton";
 import Navbar from "@/components/navbar/Navbar";
 import Link from "next/link";
+import { FaArrowLeftLong } from "react-icons/fa6";
 const getProduct = (sulg: string) => {
 	const product = products.find((p) => p.slug === sulg);
 	return product;
@@ -20,7 +21,7 @@ export default function page({ params }: { params: { slug: string } }) {
 							<img
 								src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
 								alt=""
-								className="md:h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+								className="h-64 md:h-full w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
 							/>
 						</div>
 						<div>
@@ -49,7 +50,13 @@ export default function page({ params }: { params: { slug: string } }) {
 						</div>
 					</div>
 					<div>
-						<Link href={"/"}>Back to home</Link>
+						<Link
+							href={"/"}
+							className="mx-auto my-5 w-fit flex items-center gap-x-4"
+						>
+							<FaArrowLeftLong />
+							Back to home
+						</Link>
 					</div>
 				</div>
 			) : (
