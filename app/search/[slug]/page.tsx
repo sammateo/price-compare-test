@@ -14,7 +14,9 @@ const getProducts = (sulg: string) => {
 		(p) =>
 			p.slug.toLowerCase().includes(sulg.trim().toLowerCase()) ||
 			p.name.toLowerCase().includes(sulg.trim().toLowerCase()) ||
-			p.category.toLowerCase().includes(sulg.trim().toLowerCase())
+			p.category.toLowerCase().includes(sulg.trim().toLowerCase()) ||
+			p.brand!.toLowerCase().includes(sulg.trim().toLowerCase()) ||
+			p.description!.toLowerCase().includes(sulg.trim().toLowerCase())
 	);
 	return product;
 };
