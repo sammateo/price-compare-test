@@ -28,22 +28,23 @@ export function MobileNavbar({
 				<SheetHeader>
 					<SheetTitle>Compare</SheetTitle>
 				</SheetHeader>
+
 				<nav className="flex flex-col gap-10">
 					{links.map((link) => (
 						<SheetClose asChild key={link.name}>
 							<Link
 								href={link.href}
 								key={link.name}
-								className={`text-lg font-semibold transition duration-200 hover:text-primary ${
-									pathname === link.href && "text-primary"
+								className={`text-lg transition duration-200 hover:text-blue-600 ${
+									pathname === link.href && "text-blue-600"
 								}`}
 							>
 								{link.name}
 							</Link>
 						</SheetClose>
 					))}
+					<SearchInput />
 				</nav>
-				<SearchInput />
 			</SheetContent>
 		</Sheet>
 	);

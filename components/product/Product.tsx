@@ -3,6 +3,7 @@ import { Product as ProductInterface, Price } from "@/data/Products";
 import Link from "next/link";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { IoShareSocialOutline } from "react-icons/io5";
+import Image from "next/image";
 export default function Product({
 	name,
 	prices,
