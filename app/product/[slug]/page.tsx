@@ -69,21 +69,23 @@ export default function page({ params }: { params: { slug: string } }) {
 									Where To Buy
 								</p>
 								<div>
-									{productData.prices.map((stores) => (
-										<div
-											key={stores.supermarket}
-											className="grid grid-cols-3 border-b-2 py-2 items-center"
-										>
-											<p>{stores.supermarket}</p>
-											<p className="mx-auto">
-												${stores.price}{" "}
-												{/* {stores.currency} */}
-											</p>
-											<div className="flex justify-end">
-												<RightButton />
+									{productData.prices
+										.sort((a, b) => a.price - b.price)
+										.map((stores) => (
+											<div
+												key={stores.supermarket}
+												className="grid grid-cols-3 border-b-2 py-2 items-center"
+											>
+												<p>{stores.supermarket}</p>
+												<p className="mx-auto">
+													${stores.price}{" "}
+													{/* {stores.currency} */}
+												</p>
+												<div className="flex justify-end">
+													<RightButton />
+												</div>
 											</div>
-										</div>
-									))}
+										))}
 								</div>
 							</div>
 						</div>

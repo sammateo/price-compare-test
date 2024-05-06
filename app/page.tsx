@@ -1,6 +1,6 @@
 import Banner from "@/components/banner/Banner";
 import Navbar from "@/components/navbar/Navbar";
-import ProductList from "@/components/product/ProductList";
+import PopularProducts from "@/components/product/PopularProducts";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
 		<div>
 			<Navbar />
 			<Banner />
-			<ProductList />
+			<PopularProducts />
 		</div>
 	);
 }

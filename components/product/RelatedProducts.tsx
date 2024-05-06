@@ -20,10 +20,7 @@ export default function RelatedProducts({
 			{productsInCategory && productsInCategory.length > 0 ? (
 				<div>
 					<h2 className="text-2xl font-medium">Related Products</h2>
-					<div
-						id="productlist"
-						className="flex overflow-x-scroll gap-4 px-4 py-10"
-					>
+					<div className="flex overflow-x-scroll gap-4 px-4 py-10">
 						{productsInCategory.map((product) => (
 							<RelatedProductCard
 								key={product.name}
