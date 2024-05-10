@@ -9,11 +9,15 @@ import { FaRegFlag } from "react-icons/fa6";
 import Page404 from "@/components/ui/404Page";
 import { IoAddCircleOutline, IoShareSocialOutline } from "react-icons/io5";
 import RelatedProducts from "@/components/product/RelatedProducts";
+import { getProductFromSlug } from "@/lib/postgres";
 const getProduct = (sulg: string) => {
 	const product = products.find((p) => p.slug === sulg);
 	return product;
 };
-export default function page({ params }: { params: { slug: string } }) {
+
+export default async function page({ params }: { params: { slug: string } }) {
+	// console.log(await getProductFromSlug(params.slug));
+	getProductFromSlug(params.slug);
 	const productData = getProduct(params.slug);
 	return (
 		<div>

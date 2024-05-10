@@ -1,3 +1,5 @@
+import { UUID } from "crypto";
+
 let products: Product[] = [
 	{
 		name: "Milk",
@@ -974,6 +976,7 @@ export const categories: Category[] = [
 ];
 
 export interface Product {
+	id?: UUID;
 	name: string;
 	prices: Price[];
 	category: string;
@@ -983,6 +986,8 @@ export interface Product {
 }
 
 export interface Price {
+	id?: UUID;
+	product_id?: UUID;
 	supermarket: string;
 	price: number;
 	currency: string;

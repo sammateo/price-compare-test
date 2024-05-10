@@ -3,7 +3,6 @@ import { Product as ProductInterface, Price } from "@/data/Products";
 import Link from "next/link";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { IoShareSocialOutline } from "react-icons/io5";
-import Image from "next/image";
 export default function Product({
 	name,
 	prices,
@@ -16,6 +15,8 @@ export default function Product({
 			sum += price.price;
 		});
 		return sum / prices.length;
+		// if (!prices[0]) console.log(prices);
+		return sum;
 	};
 
 	const cheapest = (prices: Price[]) => {
@@ -54,13 +55,14 @@ export default function Product({
 			</button> */}
 
 			<Link href={`/product/${slug}`}>
-				<div className="absolute end-2 top-4 z-10 rounded-full bg-white px-1.5 text-gray-900 transition hover:text-gray-900/75">
-					<p>
-						Save in {cheapest(prices).supermarket} for $
-						{cheapest(prices).price.toFixed(2)}
-					</p>
-					{/* <p>${cheapest(prices).price.toFixed(2)}</p> */}
-				</div>
+				{prices && prices.length > 0 && prices[0] && (
+					<div className="absolute end-2 top-4 z-10 rounded-full bg-white px-1.5 text-gray-900 transition hover:text-gray-900/75">
+						<p>
+							Save in {cheapest(prices).supermarket} for $
+							{cheapest(prices).price.toFixed(2)}
+						</p>
+					</div>
+				)}
 				<img
 					src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
 					alt=""
@@ -78,13 +80,15 @@ export default function Product({
 					</h3>
 				</Link>
 
-				<p className="mt-1.5 text-sm text-gray-700 flex gap-x-2 items-center">
-					<span className="whitespace-nowrap bg-blue-600 text-white px-3 py-1.5 text-xs font-medium">
-						{" "}
-						Avg{" "}
-					</span>{" "}
-					${avg(prices).toFixed(2)}
-				</p>
+				{prices && prices.length > 0 && prices[0] && (
+					<p className="mt-1.5 text-sm text-gray-700 flex gap-x-2 items-center">
+						<span className="whitespace-nowrap bg-blue-600 text-white px-3 py-1.5 text-xs font-medium">
+							{" "}
+							Avg{" "}
+						</span>{" "}
+						${avg(prices).toFixed(2)}
+					</p>
+				)}
 				{/* <div className="mt-1.5 text-sm text-gray-700">
 					<p>{cheapest(prices).supermarket}</p>
 					<p>${cheapest(prices).price.toFixed(2)}</p>
