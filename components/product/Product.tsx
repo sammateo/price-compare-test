@@ -29,38 +29,58 @@ export default function Product({
 		});
 		return minStore;
 	};
+	const secondCheapest = (prices: Price[]) => {
+		const cheapestStore = cheapest(prices);
+		let secondCheapest = prices.filter(
+			(price) => price.supermarket != cheapestStore.supermarket
+		)[0];
+		prices.forEach((price) => {
+			if (
+				price.price < secondCheapest.price &&
+				price.price > cheapestStore.price
+			) {
+				secondCheapest = price;
+			}
+		});
+		return secondCheapest;
+	};
+	const secondCheapestMessage = (prices: Price[]) => {
+		const cheapestStore = cheapest(prices);
+		let secondCheapest = prices.filter(
+			(price) => price.supermarket != cheapestStore.supermarket
+		)[0];
+		prices.forEach((price) => {
+			if (
+				price.price < secondCheapest.price &&
+				price.price > cheapestStore.price
+			) {
+				secondCheapest = price;
+			}
+		});
+		const savedAmount = secondCheapest.price - cheapestStore.price;
+		return `Save $${savedAmount.toPrecision(2)} in ${
+			cheapestStore.supermarket
+		} 
+        `;
+	};
+
 	return (
-		<div
-			// href={`/product/${slug}`}
-			className="group relative block overflow-hidden"
-		>
-			{/* <button className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
-				<span className="sr-only">Wishlist</span>
-
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					strokeWidth="1.5"
-					stroke="currentColor"
-					className="h-4 w-4"
-				>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-					/>
-				</svg>
-			</button> */}
-
+		<div className="group relative block overflow-hidden">
 			<Link href={`/product/${slug}`}>
-				<div className="absolute end-2 top-4 z-10 rounded-full bg-white px-1.5 text-gray-900 transition hover:text-gray-900/75">
-					<p>
-						Save in {cheapest(prices).supermarket} for $
-						{cheapest(prices).price.toFixed(2)}
-					</p>
-					{/* <p>${cheapest(prices).price.toFixed(2)}</p> */}
-				</div>
+				{prices && prices.length > 0 && (
+					<div className="absolute end-2 top-4 z-10 rounded-full bg-white px-2 text-gray-900 transition hover:text-gray-900/75">
+						<p>
+							Save in {cheapest(prices).supermarket} for $
+							{cheapest(prices).price.toFixed(2)}
+						</p>
+						{/* <p>${cheapest(prices).price.toFixed(2)}</p> */}
+					</div>
+				)}
+				{/* {prices && prices.length > 1 && (
+					<div className="absolute end-2 top-12 z-10 rounded-full bg-white px-2 text-gray-900 transition text-sm md:text-base font-medium hover:text-gray-900/75">
+						<p>{secondCheapestMessage(prices)}</p>
+					</div>
+				)} */}
 				<img
 					src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
 					alt=""
@@ -78,26 +98,15 @@ export default function Product({
 					</h3>
 				</Link>
 
-				<p className="mt-1.5 text-sm text-gray-700 flex gap-x-2 items-center">
-					<span className="whitespace-nowrap bg-blue-600 text-white px-3 py-1.5 text-xs font-medium">
-						{" "}
-						Avg{" "}
-					</span>{" "}
-					${avg(prices).toFixed(2)}
-				</p>
-				{/* <div className="mt-1.5 text-sm text-gray-700">
-					<p>{cheapest(prices).supermarket}</p>
-					<p>${cheapest(prices).price.toFixed(2)}</p>
-				</div> */}
-
-				{/* <div className="flex gap-x-4">
-					<Link
-						href={`/product/${slug}`}
-						className="block w-full rounded bg-blue-400 p-4 text-sm text-center font-medium transition hover:scale-105 mt-4"
-					>
-						Add to List
-					</Link>
-				</div> */}
+				{prices && prices.length > 0 && (
+					<p className="mt-1.5 text-sm text-gray-700 flex gap-x-2 items-center">
+						<span className="whitespace-nowrap bg-blue-600 text-white px-3 py-1.5 text-xs font-medium">
+							{" "}
+							Avg{" "}
+						</span>{" "}
+						${avg(prices).toFixed(2)}
+					</p>
+				)}
 				<div className="flex gap-x-4">
 					<Link
 						href={`/product/${slug}`}

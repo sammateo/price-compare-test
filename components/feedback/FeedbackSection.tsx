@@ -11,7 +11,7 @@ export default function FeedbackSection() {
 				you&apos;d like to see or if there&apos;s something that
 				doesn&apos;t look quite right.
 			</p>
-			<form className="w-10/12 max-w-[800px] shadow-lg flex flex-col gap-y-5 mx-auto py-5 px-4">
+			<form className="w-10/12 max-w-[800px] shadow-lg flex flex-col gap-y-5 mx-auto py-5 px-5 rounded-md">
 				<input
 					className="border-2 rounded outline-none p-2 focus:border-blue-400 transition-all duration-300"
 					type="email"

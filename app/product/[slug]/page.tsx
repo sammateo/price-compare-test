@@ -37,12 +37,12 @@ export default function page({ params }: { params: { slug: string } }) {
 							<img
 								src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
 								alt=""
-								className="  object-cover w-full transition duration-500 group-hover:scale-105 "
+								className="object-cover w-full transition duration-500 group-hover:scale-105 "
 							/>
 							<div className="flex gap-x-4 justify-center">
 								<Link
 									href={`/product/${params.slug}`}
-									className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:scale-105 mt-4"
+									className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:text-gray-600 mt-4"
 								>
 									<IoAddCircleOutline /> List
 								</Link>
