@@ -114,12 +114,12 @@ export default function Product({
 					>
 						<IoAddCircleOutline /> List
 					</Link>
-					<Link
+					{/* <Link
 						href={`/product/${slug}`}
 						className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:scale-105 mt-4"
 					>
 						<IoShareSocialOutline /> Share
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 		</div>
