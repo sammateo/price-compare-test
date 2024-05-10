@@ -5,8 +5,6 @@ import Product from "@/components/product/Product";
 export default function page({ params }: { params: { slug: string } }) {
 	const categoryName = new URLSearchParams(params.slug).keys().next().value;
 	const productsInCategory = getProductsInCategory(categoryName);
-	// console.log(productsInCategory);
-
 	return (
 		<div>
 			<Navbar />
