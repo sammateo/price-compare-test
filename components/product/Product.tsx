@@ -68,7 +68,7 @@ export default function Product({
 		<div className="group relative block overflow-hidden">
 			<Link href={`/product/${slug}`}>
 				{prices && prices.length > 0 && (
-					<div className="absolute end-2 top-4 z-10 rounded-full bg-white px-2 text-gray-900 transition hover:text-gray-900/75">
+					<div className="absolute end-2 top-4 z-10 rounded-full bg-white bg-opacity-75 px-2 text-gray-900 transition hover:text-gray-900/75 w-fit text-nowrap text-sm">
 						<p>
 							Save in {cheapest(prices).supermarket} for $
 							{cheapest(prices).price.toFixed(2)}
