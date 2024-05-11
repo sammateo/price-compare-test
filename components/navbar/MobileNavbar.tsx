@@ -29,7 +29,7 @@ export function MobileNavbar({
 					<SheetTitle>Compare</SheetTitle>
 				</SheetHeader>
 
-				<nav className="flex flex-col gap-10">
+				<nav className="flex flex-col gap-10 mt-4">
 					{links.map((link) => (
 						<SheetClose asChild key={link.name}>
 							<Link

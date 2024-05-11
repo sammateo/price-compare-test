@@ -33,7 +33,7 @@ export default function Navbar() {
 					<p>Compare</p>
 				</Link>
 			</div>
-			<div className="hidden md:flex gap-x-4 justify-center items-center">
+			<div className="hidden md:flex gap-x-4 lg:gap-x-10 justify-center items-center">
 				{links.map((link) => (
 					<Link
 						key={link.href}
