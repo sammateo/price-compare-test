@@ -1,3 +1,22 @@
+export const supermarkets: Supermarket[] = [
+	{
+		name: "Supermart",
+		icon_id: 1,
+	},
+	{
+		name: "FreshFoods",
+		icon_id: 2,
+	},
+	{
+		name: "DiscountGrocery",
+		icon_id: 3,
+	},
+	{
+		name: "BulkBargains",
+		icon_id: 4,
+	},
+];
+
 let products: Product[] = [
 	{
 		name: "Milk",
@@ -988,11 +1007,13 @@ export interface Price {
 	currency: string;
 }
 
-interface SupermarketPricingData {
-	products: Product[];
-}
 export interface Category {
 	name: string;
+}
+
+export interface Supermarket {
+	name: string;
+	icon_id: number;
 }
 
 export default products;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function RightButton() {
+export default function RightButton({ text }: { text: string }) {
 	return (
 		<a
 			className="group relative inline-flex items-center overflow-hidden rounded bg-blue-600 px-4 py-2 text-white focus:outline-none focus:ring active:bg-blue-500 w-fit"
@@ -25,7 +25,7 @@ export default function RightButton() {
 
 			<span className="text-sm font-medium transition-all group-hover:me-2">
 				{" "}
-				Visit{" "}
+				{text}{" "}
 			</span>
 		</a>
 	);

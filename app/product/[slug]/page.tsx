@@ -9,6 +9,8 @@ import { FaRegFlag } from "react-icons/fa6";
 import Page404 from "@/components/ui/404Page";
 import { IoAddCircleOutline, IoShareSocialOutline } from "react-icons/io5";
 import RelatedProducts from "@/components/product/RelatedProducts";
+import { FaStore, FaStoreAlt } from "react-icons/fa";
+import SupermarketLabel from "@/components/supermarket/SupermarketLabel";
 const getProduct = (sulg: string) => {
 	const product = products.find((p) => p.slug === sulg);
 	return product;
@@ -65,7 +67,7 @@ export default function page({ params }: { params: { slug: string } }) {
 								{productData.name}
 							</p> */}
 							<div>
-								<p className="text-2xl font-semibold">
+								<p className="text-2xl font-semibold my-5">
 									Where To Buy
 								</p>
 								<div>
@@ -74,16 +76,24 @@ export default function page({ params }: { params: { slug: string } }) {
 										.map((stores) => (
 											<div
 												key={stores.supermarket}
-												className="grid grid-cols-3 border-b-2 py-2 items-center"
+												className="grid grid-cols-2 border-b-2 py-2 items-center"
 											>
-												<p>{stores.supermarket}</p>
+												{/* <div className="flex items-center gap-x-1">
+													<FaStore />
+													<p>{stores.supermarket}</p>
+												</div> */}
+												<SupermarketLabel
+													name={stores.supermarket}
+												/>
 												<p className="mx-auto">
 													${stores.price}{" "}
 													{/* {stores.currency} */}
 												</p>
-												<div className="flex justify-end">
-													<RightButton />
-												</div>
+												{/* <div className="flex justify-end">
+													<RightButton
+														text={"Visit"}
+													/>
+												</div> */}
 											</div>
 										))}
 								</div>

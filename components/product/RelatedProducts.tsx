@@ -33,8 +33,8 @@ export default function RelatedProducts({
 					</div>
 				</div>
 			) : (
-				<div>
-					<h2 className="text-2xl font-medium">
+				<div className="my-5">
+					<h2 className=" font-medium text-center">
 						No Related Products found.
 					</h2>
 				</div>

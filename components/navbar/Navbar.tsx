@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
-import { categories, Category } from "@/data/Products";
 import SearchInput from "../ui/SearchInput";
 import { MobileNavbar } from "./MobileNavbar";
 import { usePathname } from "next/navigation";
