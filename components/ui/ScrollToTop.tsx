@@ -9,7 +9,7 @@ const ScrollToTopButton = () => {
 			onClick={scrollToTop}
 			className={`${
 				shown ? "scale-100" : "scale-0"
-			} z-50 w-12 h-12 transition-transform duration-200 flex fixed right-10 bottom-10 bg-blue-600 text-white rounded-full shadow-lg shadow-gray-400 justify-center items-center`}
+			} z-50 w-12 h-12 transition-transform duration-200 flex fixed right-10 bottom-10 bg-primary text-white rounded-full shadow-lg shadow-gray-400 justify-center items-center`}
 		>
 			<FaArrowUp />
 		</button>

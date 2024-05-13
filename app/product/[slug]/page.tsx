@@ -23,13 +23,13 @@ export default function page({ params }: { params: { slug: string } }) {
 			{productData ? (
 				<div>
 					<div className="grid grid-cols-1 md:grid-cols-2 px-4 gap-y-4 gap-x-2">
-						<div className="flex flex-col gap-y-5">
+						<div className="flex flex-col gap-y-5 overflow-hidden">
 							<div>
 								<p className="text-2xl font-semibold">
 									{productData.name}
 								</p>
 								<p className="flex gap-x-2 items-center">
-									<span className="bg-blue-600 text-white px-3 py-1.5 text-xs font-medium w-fit">
+									<span className="bg-primary text-white px-3 py-1.5 text-xs font-medium w-fit">
 										{productData.brand}
 									</span>
 									<span>{productData.description}</span>
@@ -39,7 +39,7 @@ export default function page({ params }: { params: { slug: string } }) {
 							<img
 								src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
 								alt=""
-								className="object-cover w-full transition duration-500 group-hover:scale-105 "
+								className="object-cover w-full transition duration-500 hover:scale-105"
 							/>
 							<div className="flex gap-x-4 justify-center">
 								<Link
@@ -56,7 +56,7 @@ export default function page({ params }: { params: { slug: string } }) {
 								</Link> */}
 								<Link
 									href={`/help`}
-									className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:scale-105 mt-4"
+									className="flex items-center gap-x-2 w-fit rounded p-2 text-sm text-center font-medium transition hover:text-gray-600 mt-4"
 								>
 									<FaRegFlag /> Report
 								</Link>

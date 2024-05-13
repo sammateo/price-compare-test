@@ -35,8 +35,8 @@ export function MobileNavbar({
 							<Link
 								href={link.href}
 								key={link.name}
-								className={`text-lg transition duration-200 hover:text-blue-600 ${
-									pathname === link.href && "text-blue-600"
+								className={`text-lg transition duration-200 hover:text-primary ${
+									pathname === link.href && "text-primary"
 								}`}
 							>
 								{link.name}

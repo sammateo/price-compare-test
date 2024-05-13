@@ -23,7 +23,7 @@ export default function SearchInput() {
 				type="text"
 				id="Search"
 				placeholder="Search for products..."
-				className="w-full rounded-md border-gray-200 py-2.5 pl-2 pe-10 shadow-md sm:text-sm outline-blue-600"
+				className="w-full rounded-md border-gray-200 py-2.5 pl-2 pe-10 shadow-md sm:text-sm outline-primary"
 			/>
 
 			<span className="absolute inset-y-0 end-0 grid w-10 place-content-center">

@@ -42,6 +42,7 @@ export default function page({ params }: { params: { slug: string } }) {
 								prices={product.prices}
 								category={product.category}
 								slug={product.slug}
+								brand={product.brand}
 							/>
 						))}
 					</div>

@@ -28,6 +28,7 @@ export default function RelatedProducts({
 								prices={product.prices}
 								category={product.category}
 								slug={product.slug}
+								brand={product.brand}
 							/>
 						))}
 					</div>

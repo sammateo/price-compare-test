@@ -39,7 +39,7 @@ export default function Navbar() {
 						href={link.href}
 						className={`${
 							pathname === link.href
-								? " border-b-2 border-blue-600"
+								? " border-b-2 border-primary"
 								: " border-b-2 border-transparent"
 						}`}
 					>
@@ -51,7 +51,7 @@ export default function Navbar() {
 				<SearchInput />
 			</div>
 			<div className="flex md:hidden gap-x-4 items-center text-xl cursor-pointer">
-				<FaBars onClick={() => setOpenNavBar(true)} />
+				<FaBars onClick={() => setOpenNavBar(true)} size={25} />
 			</div>
 			<MobileNavbar
 				openNavbar={openNavbar}

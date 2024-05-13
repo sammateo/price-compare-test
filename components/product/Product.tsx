@@ -100,7 +100,7 @@ export default function Product({
 
 				{prices && prices.length > 0 && (
 					<p className="mt-1.5 text-sm text-gray-700 flex gap-x-2 items-center">
-						<span className="whitespace-nowrap bg-blue-600 text-white px-3 py-1.5 text-xs font-medium">
+						<span className="whitespace-nowrap bg-primary text-white px-3 py-1.5 text-xs font-medium">
 							{" "}
 							Avg{" "}
 						</span>{" "}

@@ -33,7 +33,7 @@ export default function ProductList() {
 						onClick={() => {
 							setPageCount(pageCountIncrement + pageCount);
 						}}
-						className="bg-blue-700 text-white px-5 py-2 rounded-full"
+						className="bg-primary-foreground text-white px-5 py-2 rounded-full"
 					>
 						See More
 					</button>

@@ -7,6 +7,7 @@ export default function RelatedProductCard({
 	name,
 	prices,
 	slug,
+	brand,
 }: ProductInterface) {
 	const avg = (prices: Price[]) => {
 		let sum = 0;
@@ -41,6 +42,9 @@ export default function RelatedProductCard({
 			</Link>
 
 			<div className="relative border border-gray-100 bg-white p-6">
+				<p className="text-gray-700 py-1.5 text-xs font-medium w-fit uppercase">
+					{brand}
+				</p>
 				<Link href={`/product/${slug}`}>
 					<h3 className="mt-4 text-lg font-medium text-gray-900">
 						{name}
@@ -48,7 +52,7 @@ export default function RelatedProductCard({
 				</Link>
 
 				<p className="mt-1.5 text-sm text-gray-700 flex gap-x-2 items-center">
-					<span className="whitespace-nowrap bg-blue-600 text-white px-3 py-1.5 text-xs font-medium">
+					<span className="whitespace-nowrap bg-primary text-white px-3 py-1.5 text-xs font-medium">
 						{" "}
 						Avg{" "}
 					</span>{" "}

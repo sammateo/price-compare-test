@@ -43,7 +43,7 @@ export default function FeedbackSection() {
 						></textarea>
 						<button
 							type="submit"
-							className="block w-fit mx-auto rounded bg-blue-600 px-4 py-2 text-sm text-white text-center font-medium transition  hover:scale-105 mt-4"
+							className="block w-fit mx-auto rounded bg-primary px-4 py-2 text-sm text-white text-center font-medium transition  hover:scale-105 mt-4"
 						>
 							Send Message
 						</button>
@@ -61,13 +61,13 @@ export default function FeedbackSection() {
 					<div className="flex justify-center gap-x-5 w-full">
 						<Link
 							href="/"
-							className="flex items-center gap-x-2 font-medium border-2 border-transparent transition duration-200 hover:border-blue-600 px-4 py-1 rounded-full"
+							className="flex items-center gap-x-2 font-medium border-2 border-transparent transition duration-200 hover:border-primary px-4 py-1 rounded-full"
 						>
 							<FaArrowLeft />
 							Back to Home
 						</Link>
 						<button
-							className="flex items-center gap-x-2 font-medium border-2 border-transparent transition duration-200 hover:border-blue-600 px-4 py-1 rounded-full"
+							className="flex items-center gap-x-2 font-medium border-2 border-transparent transition duration-200 hover:border-primary px-4 py-1 rounded-full"
 							onClick={() => {
 								setSubmitted(false);
 							}}
